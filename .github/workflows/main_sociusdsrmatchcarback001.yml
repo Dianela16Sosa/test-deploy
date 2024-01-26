@@ -40,7 +40,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: $
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
       - name: Download artifact from build job
@@ -54,7 +54,7 @@ jobs:
         with:
           app-name: 'sociusdsrmatchcarback001'
           slot-name: 'Production'
-          publish-profile: $
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9C48B153F1A649FD9B41BD5A348445E9 }}
           package: nest.zip
           
       - name: Delete zip file
