@@ -25,15 +25,11 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          
-      - name: Zip all files for upload between jobs
-        run: Compress-Archive -Path .\* -DestinationPath nest.zip
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: nest.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,7 +51,4 @@ jobs:
           app-name: 'sociusdsrmatchcarback001'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9C48B153F1A649FD9B41BD5A348445E9 }}
-          package: nest.zip
-          
-      - name: Delete zip file
-        run: rm nest.zip
+          package: .
