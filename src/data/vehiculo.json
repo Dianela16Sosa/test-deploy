@@ -1,0 +1,41 @@
+{
+  "patente": "KSHL73",
+  "dvPatente": null,
+  "modeloVehiculoId": "1c538463-db70-4a66-99d5-7817f2e1c51d",
+  "modeloVehiculo": {
+    "id": "1c538463-db70-4a66-99d5-7817f2e1c51d",
+    "fechaCreacion": "2022-02-23T20:35:03.37",
+    "tipoVehiculoId": "e4b624ff-978f-4639-9bed-2b86db788c83",
+    "marcaVehiculoId": "a74a4542-0655-40d6-b66a-39b627a3fd9d",
+    "marcaVehiculo": {
+      "id": "a74a4542-0655-40d6-b66a-39b627a3fd9d",
+      "nombre": "TOYOTA",
+      "estado": true
+    },
+    "tipoVehiculo": {
+      "id": "e4b624ff-978f-4639-9bed-2b86db788c83",
+      "nombre": "STATION WAGON",
+      "estado": true,
+      "convenioTipoVehiculos": null
+    },
+    "nombre": "RAV 4 2.0",
+    "estado": true
+  },
+  "anio": 2018,
+  "numeroMotor": "3ZR2A34077",
+  "fechaCreacion": "2022-02-23T22:12:45.3666667",
+  "propietarioId": "d59b0b95-97f2-4351-a26c-a49df959b4a1",
+  "propietario": {
+    "id": "d59b0b95-97f2-4351-a26c-a49df959b4a1",
+    "rut": "16575313",
+    "dv": "5",
+    "nombre": "ACEVEDO CAVIERES FABIOLA ANDREA",
+    "apellidoPaterno": null,
+    "apellidoMaterno": null,
+    "email": null,
+    "telefono": null,
+    "direccion": null,
+    "regionId": null,
+    "comunaId": null
+  }
+}
