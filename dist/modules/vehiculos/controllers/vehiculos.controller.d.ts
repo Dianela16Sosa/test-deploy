@@ -1,0 +1,48 @@
+import { VehiculosService } from '../services/vehiculos.service';
+import { CreateVehiculoDto, UpdateVehiculoDto } from '../dto';
+import { ContactarDto } from '../dto/contactar.dto';
+export declare class VehiculosController {
+    private readonly vehiculosService;
+    constructor(vehiculosService: VehiculosService);
+    create(createVehiculoDto: CreateVehiculoDto): Promise<{
+        imagesFolderName: string;
+        patente: string;
+        chasis: string;
+        numeroMotor: string;
+        modeloFK: number;
+        anio: number;
+        kilometraje: number;
+        numeroPuertas: number;
+        numeroAsientos: number;
+        descripcion: string;
+        version: string;
+        cantidadLlaves: number;
+        cilindrada: string;
+        tipoVehiculoFK: number;
+        tipoCombustibleFK: number;
+        transmisionFK: number;
+        colorExteriorFK: number;
+        colorInteriorFK: number;
+        condicionVehiculoFK: number;
+        traccionFK: number;
+        id: any;
+    }>;
+    findAll(): Promise<any>;
+    findAllWithImages(): Promise<any[]>;
+    findAllWithImagesSeller(): Promise<any[]>;
+    findTipoCombustible(): Promise<any>;
+    findTransmision(): Promise<any>;
+    findMarcaVehiculo(): Promise<any>;
+    findCondicionVehiculo(): Promise<any>;
+    findColores(): Promise<any>;
+    findColoresHex(): Promise<any>;
+    findVehiculoYears(): Promise<any>;
+    findTipoTbVehiculo(): Promise<any>;
+    findTraccion(): Promise<any>;
+    getCilindradas(): Promise<any>;
+    findOne(id: number): Promise<any>;
+    getVehicleByPatente(patente: string): import("../interfaces/vehiculo.interface").VehiculoAPI;
+    desactivarVehiculo(id: number): Promise<void>;
+    editarVehiculo(id: string, updateVehiculoDto: UpdateVehiculoDto): Promise<any>;
+    registrarIntentoContactar(contactarDto: ContactarDto): Promise<void>;
+}
